@@ -1,0 +1,5 @@
+cd web, cd api
+nmp i
+db.json másolat létrehozása
+https://github.com/suli2023/i1n_ema
+nmp start

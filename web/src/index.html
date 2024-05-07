@@ -1,0 +1,102 @@
+<!--
+File: index.html
+Author: Kriston Attila
+Copyright: 2024, Kriston Attila
+Group: Szoft I/1/N
+Date: 2024-05-07
+Github: https://github.com/atekthebro/
+Licenc: GNU GPL
+-->
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">        
+  </head>
+  <body>
+    <div class="container">
+      <h1>Books</h1>
+
+
+            <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#operatorModal" onclick="startAdding()">
+        <i class="bi bi-journal-plus"></i>
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="operatorModal" tabindex="-1" aria-labelledby="operatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="operatorModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+              <div class="addform">
+                <div class="input">
+                  <label for="id" class="form-label">
+                    Id
+                  </label>
+                  <input type="text" id="id" readonly
+                  class="form-control">
+                </div>
+                <div class="input">
+                  <label for="cim" class="form-label">
+                    Cím
+                  </label>
+                  <input type="text" id="cim"
+                  class="form-control">
+                </div>
+                <div class="input">
+                  <label for="szerzo" class="form-label">
+                    Szerző
+                  </label>
+                  <input type="text" id="szerzo"
+                  class="form-control">
+                </div>
+                <div class="input">
+                  <label for="ar" class="form-label">
+                    Ár
+                  </label>
+                  <input type="text" id="ar"
+                  class="form-control">
+                </div>
+              </div>
+        
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i></button>
+              <button type="button" class="btn btn-primary" id="addButton"><i class="bi bi-floppy"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Cím</th>
+            <th>Szerző</th>
+            <th>Ár</th>
+          </tr>
+        </thead>
+        <tbody id="booksBody"></tbody>
+      </table>
+
+    </div>
+    <script src="bootstrap.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
